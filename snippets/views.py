@@ -64,7 +64,7 @@ def snippet_list(request,format=None):
 @api_view(['GET','PUT','DELETE'])
 def snippet_detail(request,pk,format=None):
     try:
-        snippet=Snippet.objects.get(pk=pk)
+        snippet=Snippet.objects.get(pk = pk)
     except Exception.DoesNotExist:
         return HttpResponse(status=404)
     
